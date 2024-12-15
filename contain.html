@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Semangat untukmu</title>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11.0.19/dist/sweetalert2.all.min.js"></script>
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background: url('img/bgmain.jpg') no-repeat center center fixed;
+            background-size: cover;
+            overflow: hidden;
+        }
+        #Content {
+            text-align: center;
+            margin-top: 100px;
+            color: white;
+        }
+        #suratin img {
+            width: 150px;
+            cursor: pointer;
+            animation: pulse 2s infinite;
+        }
+        @keyframes pulse {
+            0%, 100% {
+                transform: scale(1);
+            }
+            50% {
+                transform: scale(1.1);
+            }
+        }
+        #ket {
+            color: #fff;
+            margin-top: 10px;
+            font-size: 18px;
+        }
+    </style>
+</head>
+<body>
+    <div id="Content">
+        <div id="suratin" onClick="memulai();audio.play();">
+            <img src="img/bgsurat.png" alt="Klik untuk memulai">
+        </div>
+        <p id="ket">To pricess zhyyaa</p>
+        <p id="ket">Click yaa!!</p>
+    </div>
+
+    <script>
+        let audio;
+        async function memulai() {
+            audio = new Audio('URL_LAGU_MU');
+            audio.play();
+
+            // Animasi pesan
+            await Swal.fire({
+                title: 'Untuk Kamu yang Hebat!',
+                text: 'Bagaimana pun hari ini, tetep semangat dan bersyukur',
+                imageUrl: 'https://github.com/keenanalbnyr/gambar-kitty/blob/main/kitty.jpg?raw=true',
+                imageWidth: 200,
+                imageHeight: 200,
+                background: 'rgba(0,0,0,0.8)',
+                color: '#fff'
+            });
+
+            await Swal.fire({
+                title: 'Untuk kamu yang kuat! ',
+                text: 'jangan lupa istirahat yaa, soalnya nanti jadwal latihan kamu lebih lama dan padet',
+                imageUrl: 'https://github.com/keenanalbnyr/kitten/blob/main/img/kitty2.jpg?raw=true',
+                imageWidth: 200,
+                imageHeight: 200,
+                background: 'rgba(0,0,0,0.8)',
+                color: '#fff'
+            });
+
+            await Swal.fire({
+                title: 'Jangan lupa tersenyum 😊',
+                text: 'Tetaplah berdiri dan melangkah dengan segala proses yg sudah kamu lewati. SEMANGATTTTT!!!',
+                imageUrl: 'https://github.com/keenanalbnyr/kitten/blob/main/senyuminkitty.jpg?raw=true',
+                imageWidth: 200,
+                imageHeight: 350,
+                background: 'rgba(0,0,0,0.8)',
+                color: '#fff'
+            });
+
+        }
+    </script>
+</body>
+</html>
